@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration — Summer Tech Program 2026 | Ahsan Tutors</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+</head>
+<body>
+
+<!-- COUNTDOWN STRIP -->
+<div class="strip">⏰ Registration closes in: <span id="cd">...</span> &nbsp;·&nbsp; Seats are LIMITED!</div>
+
+<!-- HEADER -->
+<div class="header">
+  <img src="AHSAN-TUTORS-LOGO-2-2.png" alt="Ahsan Tutors Logo" class="logo">
+
+  <div class="header-right">
+    <div class="prog">Summer Tech Program 2026</div>
+    <div class="meta">Starts <span>2 July 2026</span> &nbsp;·&nbsp; Online Mode &nbsp;·&nbsp; </div>
+  </div>
+</div>
+
+<!-- HERO BAND -->
+<div class="hero-band">
+  <h1>AI · Coding · Digital Skills — <span>Register Now</span></h1>
+  <div class="pills">
+    <span class="pill">🤖 AI &amp; Automation</span>
+    <span class="pill">🐍 Python</span>
+    <span class="pill">🌐 Web Dev</span>
+    <span class="pill">🎮 Game Dev</span>
+    <span class="pill">📱 Social Media</span>
+    <span class="pill g">⏰ Deadline: 30 June 2026</span>
+  </div>
+</div>
+
+<!-- FORM WRAP -->
+<div class="wrap">
+  <div class="info-bar">
+    <span style="font-size:17px;flex-shrink:0">ℹ️</span>
+    <div>Fill all <span style="color:var(--red);font-weight:700">*</span> required fields. After submitting, our team will contact you on <strong>WhatsApp within 24 hours</strong> to confirm your seat and share payment details. &nbsp;📞 <strong>0345-3224922</strong></div>
+  </div>
+
+  <form id="regForm" novalidate>
+
+    <!-- 1. STUDENT -->
+    <div class="sec">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Student Information</h2></div>
+      <div class="card">
+        <div class="row2">
+          <div class="field">
+            <label>Full Name <span class="req">*</span></label>
+            <input type="text" id="studentName" placeholder="e.g. Ali Hassan" required>
+          </div>
+          <div class="field">
+            <label>Date of Birth <span class="req">*</span><span class="hint">Age 7–20</span></label>
+            <input type="date" id="dob" required>
+          </div>
+        </div>
+        <div class="row3">
+          <div class="field">
+            <label>Age <span class="req">*</span></label>
+            <input type="number" id="age" placeholder="e.g. 14" min="7" max="20" required>
+          </div>
+          <div class="field">
+            <label>Gender <span class="req">*</span></label>
+            <select id="gender" required>
+              <option value="">Select</option>
+              <option>Male</option><option>Female</option><option>Prefer not to say</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Class / Grade <span class="req">*</span></label>
+            <select id="grade" required>
+              <option value="">Select</option>
+              <option>Grade 2</option><option>Grade 3</option><option>Grade 4</option>
+              <option>Grade 5</option><option>Grade 6</option><option>Grade 7</option>
+              <option>Grade 8</option><option>Grade 9</option><option>Grade 10</option>
+              <option>O-Level / A-Level</option><option>Undergraduate</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>School / College <span class="req">*</span></label>
+            <input type="text" id="school" placeholder="e.g. The City School, DHA" required>
+          </div>
+          <div class="field">
+            <label>Tech Experience</label>
+            <select id="experience">
+              <option value="">Select level</option>
+              <option>No experience</option>
+              <option>Basic (MS Office, internet)</option>
+              <option>Intermediate (some coding)</option>
+              <option>Advanced</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. PARENT -->
+    <div class="sec">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Parent / Guardian Information</h2></div>
+      <div class="card">
+        <div class="row2">
+          <div class="field">
+            <label>Parent / Guardian Name <span class="req">*</span></label>
+            <input type="text" id="parentName" placeholder="e.g. Muhammad Hassan" required>
+          </div>
+          <div class="field">
+            <label>Relationship <span class="req">*</span></label>
+            <select id="relation" required>
+              <option value="">Select</option>
+              <option>Father</option><option>Mother</option>
+              <option>Guardian</option><option>Sibling</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>WhatsApp Number <span class="req">*</span><span class="hint">For confirmation</span></label>
+            <input type="tel" id="whatsapp" placeholder="e.g. 0315-6569901" required>
+          </div>
+          <div class="field">
+            <label>Email Address <span class="req">*</span></label>
+            <input type="email" id="email" placeholder="parent@email.com" required>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Alternate Phone</label>
+            <input type="tel" id="phone2" placeholder="Optional backup number">
+          </div>
+          <div class="field">
+            <label>Home Area / City <span class="req">*</span></label>
+            <input type="text" id="address" placeholder="e.g. DHA Phase 7, Karachi" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. COURSES -->
+    <div class="sec">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Course Selection</h2></div>
+      <div class="card">
+        <div class="field">
+          <label>Select courses of interest <span class="req">*</span><span class="hint">Choose one or more</span></label>
+          <div class="cb-grid" id="courseGrid">
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="AI Generative Essentials"><div class="cb-box"></div><span class="ci">🤖</span>AI (Generative) Essentials</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Python Programming"><div class="cb-box"></div><span class="ci">🐍</span>Python Programming</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Web Development"><div class="cb-box"></div><span class="ci">🌐</span>Web Development</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Basic Game Development"><div class="cb-box"></div><span class="ci">🎮</span>Basic Game Development</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Digital Marketing"><div class="cb-box"></div><span class="ci">📈</span>Digital Marketing</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Social Media Marketing"><div class="cb-box"></div><span class="ci">📱</span>Social Media Marketing</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Graphics Designing"><div class="cb-box"></div><span class="ci">🎨</span>Graphics Designing</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Video Editing"><div class="cb-box"></div><span class="ci">🎬</span>Video Editing</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="MS Office"><div class="cb-box"></div><span class="ci">💼</span>MS Office</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="English Language Speaking"><div class="cb-box"></div><span class="ci">🗣️</span>English (Speaking)</label>
+            <label class="cb-item" onclick="toggleCB(this,event)"><input type="checkbox" value="Arts and Craft"><div class="cb-box"></div><span class="ci">🖌️</span>Arts and Craft</label>
+            <label class="cb-item all-courses-item" onclick="toggleAllCourses(this,event)"><input type="checkbox" value="All Courses" id="allCB"><div class="cb-box all-cb-box"></div><span class="ci">⭐</span><strong>All Courses!</strong></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. DEVICE -->
+    <div class="sec">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Device &amp; Internet</h2></div>
+      <div class="card">
+        <div class="row2">
+          <div class="field">
+            <label>Device available <span class="req">*</span></label>
+            <select id="device" required>
+              <option value="">Select device</option>
+              <option>Laptop / PC</option>
+              <option>Tablet (iPad / Android)</option>
+              <option>Smartphone only</option>
+              <option>Desktop Computer</option>
+              <option>No device yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Internet connection <span class="req">*</span></label>
+            <select id="internet" required>
+              <option value="">Select</option>
+              <option>Broadband / Fiber (stable)</option>
+              <option>Mobile Data (4G/5G)</option>
+              <option>Intermittent / Weak</option>
+              <option>No stable internet yet</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- 6. REFERRAL -->
+    <div class="sec">
+      <div class="sec-head"><div class="sec-num">6</div><h2>Referral &amp; Additional Info</h2></div>
+      <div class="card">
+        <div class="row2">
+          <div class="field">
+            <label>How did you hear about us? <span class="req">*</span></label>
+            <select id="source" required>
+              <option value="">Select source</option>
+              <option>Facebook</option><option>Instagram</option><option>TikTok</option>
+              <option>WhatsApp Message</option><option>Friend / Family Referral</option>
+              <option>YouTube</option><option>LinkedIn</option>
+              <option>School / Teacher</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Referral Name <span class="hint">Rs.500 off for both!</span></label>
+            <input type="text" id="referral" placeholder="Name of person who referred you">
+          </div>
+        </div>
+        <div class="field">
+          <label>Learning Goals</label>
+          <textarea id="goals" placeholder="What do you want to learn or achieve this summer? e.g. Build my own website, learn AI tools for school projects..."></textarea>
+        </div>
+        <div class="field">
+          <label>Special Requirements or Questions</label>
+          <textarea id="questions" placeholder="Any special needs, Urdu medium preference, or questions about the program..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMS -->
+    <label class="terms-row" id="termsRow" onclick="this.classList.toggle('on')">
+      <div class="t-box"></div>
+      <div>I confirm all information is accurate and agree to the Terms &amp; Conditions of Ahsan Tutors Summer Tech Program 2026. I understand that enrollment is confirmed only after full fee payment is received.</div>
+    </label>
+
+    <!-- SUBMIT -->
+    <div class="sub-area">
+      <button type="submit" class="sub-btn" id="subBtn" onclick="handleSubmit(event)">
+        <div class="spinner" id="spin"></div>
+        <span id="subTxt">🚀 &nbsp;Submit Registration</span>
+      </button>
+      <p class="sub-note">Our team will WhatsApp you within 24 hours &nbsp;·&nbsp; 📞 0315-6569901</p>
+    </div>
+
+  </form>
+
+  <!-- SUCCESS -->
+  <div class="success" id="successDiv">
+    <div class="s-icon">✅</div>
+    <h2>Registration Received!</h2>
+    <p>JazakAllah Khair, <strong id="sName"></strong>! Your registration for <strong>Summer Tech Program 2026</strong> has been saved.</p>
+    <p>Our team will contact you on WhatsApp at <strong id="sWA"></strong> within 24 hours with payment details and enrollment confirmation.</p>
+    <p style="margin-top:16px;">📅 Program starts: <strong>2nd July 2026</strong> &nbsp;·&nbsp; 📞 <strong>0315-6569901</strong></p>
+  </div>
+</div>
+
+<footer>
+  <strong>Ahsan Tutors</strong> — Enlightening the Future &nbsp;|&nbsp;
+  CPE Office, DHA Phase VII, Karachi &nbsp;|&nbsp;
+  <a href="tel:+923453224922">0315-6569901</a>
+</footer>
+
+<script src="function.js"></script>
+</body>
+</html>
